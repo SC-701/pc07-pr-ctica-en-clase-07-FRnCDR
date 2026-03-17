@@ -1,15 +1,10 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE [dbo].[AgregarProducto]
+﻿CREATE PROCEDURE [dbo].[AgregarProducto]
 	-- Add the parameters for the stored procedure here
 	@Id AS UNIQUEIDENTIFIER
     ,@IdSubCategoria AS UNIQUEIDENTIFIER
     ,@Nombre AS VARCHAR(MAX)
     ,@Descripcion AS VARCHAR(MAX)
-    ,@Precio AS DECIMAL(18, 0)
+    ,@Precio AS DECIMAL(18, 2)
     ,@Stock AS INT
     ,@CodigoBarras AS VARCHAR(MAX)
 AS

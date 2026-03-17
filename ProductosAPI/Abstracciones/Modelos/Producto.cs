@@ -11,7 +11,7 @@ namespace Abstracciones.Modelos
             [StringLength(200, ErrorMessage = "La descripcion del producto debe ser mayor a 4 caracteres y menor de 200 caracteres", MinimumLength = 4)]
             public string Descripcion { get; set; }
             [Required(ErrorMessage = "La propiedad precio es requerida")]
-            [RegularExpression(@"^\d+(\.\d{1,2})?$", ErrorMessage = "El precio debe ser un número decimal válido")]
+            [RegularExpression(@"^\d+.*$", ErrorMessage = "Debe iniciar con un número")]
             public decimal Precio { get; set; }
             [Required(ErrorMessage = "La propiedad stock es requerida")]
             [RegularExpression(@"^[0-9]+$", ErrorMessage = "El stock debe ser un número entero")]

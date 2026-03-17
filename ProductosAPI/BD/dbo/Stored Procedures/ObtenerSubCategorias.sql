@@ -1,9 +1,4 @@
-﻿-- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
--- =============================================
-CREATE PROCEDURE [dbo].[ObtenerSubCategorias]
+﻿CREATE PROCEDURE [dbo].[ObtenerSubCategorias]
 	@IdCategoria UNIQUEIDENTIFIER
 AS
 BEGIN
@@ -14,7 +9,7 @@ BEGIN
     -- Consultar las subcategorías para el IdCategoria proporcionado
     SELECT 
         sc.Id,
-        sc.Nombre AS SubCategoria,
+        sc.Nombre AS Nombre,
         sc.IdCategoria
     FROM dbo.SubCategorias sc
     WHERE sc.IdCategoria = @IdCategoria;
